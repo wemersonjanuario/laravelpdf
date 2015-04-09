@@ -18,6 +18,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.4.0",
+    "wemersonjanuario/pdf": "dev-master",
     "illuminate/http": "5.x",
     "illuminate/view": "5.x"
   },
