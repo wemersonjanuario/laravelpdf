@@ -22,6 +22,10 @@
     "illuminate/http": "5.x",
     "illuminate/view": "5.x"
   },
+  "recommend": {
+        "wemersonjanuario/wkhtmltopdf-windows": "0.12.2.1",
+		"h4cc/wkhtmltopdf-i386": "*"
+    },
   "autoload": {
     "psr-4": {
       "Inline\\LaravelPDF\\": "src/Inline/LaravelPDF"
