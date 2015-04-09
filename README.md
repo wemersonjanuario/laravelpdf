@@ -3,7 +3,7 @@
 
 This is a yet another html to pdf converter for Laravel 5(see Laravel 4 here [cangelis/l4pdf](https://github.com/cangelis/l4pdf)). This package uses [wkhtmltopdf](https://github.com/antialize/wkhtmltopdf) as a third-party tool so `proc_*()` functions has to be enabled in your php configurations and `wkhtmltopdf` tool should be installed in your machine (You can download it from [here](https://code.google.com/p/wkhtmltopdf/downloads/list)).
 
-**If you are not a Laravel user, check out [here](https://github.com/cangelis/php-pdf)**
+**If you are not a Laravel user, check out [here](https://github.com/wemersonjanuario/php-pdf)**
 
 ## Installation
 
@@ -12,21 +12,14 @@ This is a yet another html to pdf converter for Laravel 5(see Laravel 4 here [ca
 Add this to your `composer.json`
     
     {
-        "repositories": [        
-                {
-                  "type": "git",
-                  "url": "https://github.com/wemersonjanuario/php-pdf"
-                }
-              ],
-        "require": {
-            "cangelis/pdf": "dev-wemersonjanuario-laravel-5",
+        "require": {            
             "inline/laravelpdf": "1.0.*"
         }
     }
 
 ### Step 2
 
-Add this line to `providers` array in your `app/config/app.php`
+Add this line to `providers` array in your `config/app.php`
 
     'Inline\LaravelPDF\PDFServiceProvider'
 
