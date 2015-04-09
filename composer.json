@@ -26,5 +26,5 @@
     "psr-4": {
       "Inline\\LaravelPDF\\": "src/Inline/LaravePDF"
     }
-  },
+  }
 }
