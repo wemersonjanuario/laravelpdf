@@ -10,9 +10,16 @@ This is a yet another html to pdf converter for Laravel 5(see Laravel 4 here [ca
 ### Step 1
 
 Add this to your `composer.json`
-
+    
     {
+        "repositories": [        
+                {
+                  "type": "git",
+                  "url": "https://github.com/wemersonjanuario/php-pdf"
+                }
+              ],
         "require": {
+            "cangelis/pdf": "dev-wemersonjanuario-laravel-5",
             "inline/laravelpdf": "1.0.*"
         }
     }
