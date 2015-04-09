@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Inline\\LaravelPDF\\": "src/Inline/LaravePDF"
+      "Inline\\LaravelPDF\\": "src/Inline/LaravelPDF"
     }
   }
 }
