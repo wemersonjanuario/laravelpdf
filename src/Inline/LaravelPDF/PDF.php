@@ -4,10 +4,7 @@ use Illuminate\Support\Facades\View;
 
 class PDF extends \CanGelis\PDF\PDF
 {
-  public static function foo()
-  {
-    echo 'It Works';
-  }
+  
   /**
    * Loads the Input Content from the view
    *

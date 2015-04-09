@@ -14,18 +14,17 @@
       "name": "Wemerson Januario",
       "email": "wemerson.januario@gmail.com"
     }
-  ],
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/wemersonjanuario/php-pdf"
-    }
-  ],
+  ], 
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.4.0",
     "cangelis/pdf": "dev-wemersonjanuario-laravel-5",
     "illuminate/http": "5.x",
     "illuminate/view": "5.x"
-  }
+  },
+  "autoload": {
+    "psr-4": {
+      "Inline\\LaravelPDF\\": "src/Inline/LaravePDF"
+    }
+  },
 }
