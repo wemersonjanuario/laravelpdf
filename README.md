@@ -1,8 +1,7 @@
-# HTML to PDF Converter for Laravel 4
+# HTML to PDF Converter for Laravel 5
 
-[![Build Status](https://travis-ci.org/cangelis/l4pdf.png?branch=master)](https://travis-ci.org/cangelis/l4pdf)
 
-This is a yet another html to pdf converter for Laravel 4. This package uses [wkhtmltopdf](https://github.com/antialize/wkhtmltopdf) as a third-party tool so `proc_*()` functions has to be enabled in your php configurations and `wkhtmltopdf` tool should be installed in your machine (You can download it from [here](https://code.google.com/p/wkhtmltopdf/downloads/list)).
+This is a yet another html to pdf converter for Laravel 5(see Laravel 4 here [cangelis/l4pdf](https://github.com/cangelis/l4pdf)). This package uses [wkhtmltopdf](https://github.com/antialize/wkhtmltopdf) as a third-party tool so `proc_*()` functions has to be enabled in your php configurations and `wkhtmltopdf` tool should be installed in your machine (You can download it from [here](https://code.google.com/p/wkhtmltopdf/downloads/list)).
 
 **If you are not a Laravel user, check out [here](https://github.com/cangelis/php-pdf)**
 
@@ -14,7 +13,7 @@ Add this to your `composer.json`
 
     {
         "require": {
-            "cangelis/l4pdf": "1.1.*"
+            "inline/laravelpdf": "1.0.*"
         }
     }
 
@@ -22,23 +21,23 @@ Add this to your `composer.json`
 
 Add this line to `providers` array in your `app/config/app.php`
 
-    'CanGelis\L4pdf\ServiceProvider'
+    'Inline\LaravelPDF\PDFServiceProvider'
 
 ### Step 3
 
-Add this line to `aliases` array in your `app/config/app.php`
+Add this line to `aliases` array in your `config/app.php`
 
-    'PDF' => 'CanGelis\L4pdf\PDFFacade'
+    'PDF' => 'Inline\LaravelPDF\PDFFacade'
 
 ### Step 4
 
 Run this command to publish the configurations of this package
 
-    php artisan config:publish cangelis/l4pdf
+    php artisan vendor:publish
 
 ### Step 5
 
-Configure your `wkhtmltopdf` executable path under `app/config/packages/cangelis/l4pdf/config.php`
+Configure your `wkhtmltopdf` executable path under `config/laravelpdf.php`
 
     'executable' => '/usr/bin/wkhtmltopdf'
 
@@ -54,7 +53,7 @@ Configure your `wkhtmltopdf` executable path under `app/config/packages/cangelis
 
 ## Saving the PDF
 
-l4pdf uses [League\Flysystem](https://github.com/thephpleague/flysystem) to save the file to the local or remote filesystems.
+laravelpdf uses [League\Flysystem](https://github.com/thephpleague/flysystem) to save the file to the local or remote filesystems.
 
 ### Usage
 
@@ -107,8 +106,11 @@ Please see all the available adapters on the [League\Flysystem](https://github.c
 
 ## Documentation
 
-You can see all the available methods in the full [documentation](https://github.com/cangelis/l4pdf/blob/master/DOCUMENTATION.md) file
+You can see all the available methods in the full [documentation](https://github.com/wemersonjanuario/laravelpdf/blob/master/DOCUMENTATION.md) file
 
 ## Contribution
 
 Feel free to contribute!
+
+## Thanks
+Thanks Can Geliş who made Laravel 4 support [cangelis/l4pdf](https://github.com/cangelis/l4pdf)
