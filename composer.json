@@ -1,0 +1,31 @@
+{
+  "name": "inline/laravelpdf",
+  "description": "Another HTML to PDF Converter for Laravel",
+  "keywords": [
+    "pdf",
+    "pdf converter",
+    "laravel5",
+    "html to pdf",
+    "wkhtmltopdf"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wemerson Januario",
+      "email": "wemerson.januario@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/wemersonjanuario/php-pdf"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "cangelis/pdf": "dev-wemersonjanuario-laravel-5",
+    "illuminate/http": "5.x",
+    "illuminate/view": "5.x"
+  }
+}
