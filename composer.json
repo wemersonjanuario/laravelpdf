@@ -5,6 +5,7 @@
     "pdf",
     "pdf converter",
     "laravel5",
+	"laravel",
     "html to pdf",
     "wkhtmltopdf"
   ],
@@ -12,10 +13,14 @@
   "authors": [
     {
       "name": "Wemerson Januario",
-      "email": "wemerson.januario@gmail.com"
+      "email": "wemerson.januario@gmail.com",
+	  "homepage": "http://linkedin.com/in/wemersonjanuario"
     }
   ],
-  "minimum-stability": "dev",
+  
+  "support": {
+		"issues": "https://github.com/wemersonjanuario/laravelpdf/issues?state=open"
+	},
   "require": {
     "php": ">=5.4.0",
     "wemersonjanuario/pdf": "dev-master",
@@ -30,5 +35,6 @@
     "psr-4": {
       "Inline\\LaravelPDF\\": "src/Inline/LaravelPDF"
     }
-  }
+  },
+  "minimum-stability": "dev"
 }

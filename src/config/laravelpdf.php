@@ -1,5 +1,5 @@
 <?php
 return [
-//	'executable' => '/usr/bin/wkhtmltopdf'
-	'executable' => base_path() . '/bin/wkhtmltopdf-64bit.exe'
+//	'executable' => '/usr/bin/wkhtmltopdf'//For Linux
+    'executable' => base_path() . '/bin/wkhtmltopdf-64bit.exe'//For Windows
 ];
