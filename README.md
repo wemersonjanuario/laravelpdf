@@ -13,7 +13,7 @@ Add this to your `composer.json`
     
     {
         "require": {            
-            "inline/laravelpdf": "1.0.*"
+            "wemersonjanuario/laravelpdf": "1.0.*"
         }
     }
 
