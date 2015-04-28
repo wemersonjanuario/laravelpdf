@@ -23,7 +23,7 @@
 	},
   "require": {
     "php": ">=5.4.0",
-    "wemersonjanuario/pdf": "dev-master",
+    "wemersonjanuario/pdf": "1.x",
     "illuminate/http": "5.x",
     "illuminate/view": "5.x"
   },
