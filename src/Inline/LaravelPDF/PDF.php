@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 
-class PDF extends \CanGelis\PDF\PDF
+class PDF extends \Inline\PDF\PDF
 {
 
     /**
