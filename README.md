@@ -21,13 +21,13 @@ Add this to your `composer.json`
 
 Add this line to `providers` array in your `config/app.php`
 
-    'Inline\LaravelPDF\PDFServiceProvider'
+    Inline\LaravelPDF\PDFServiceProvider::class
 
 ### Step 3
 
 Add this line to `aliases` array in your `config/app.php`
 
-    'PDF' => 'Inline\LaravelPDF\PDFFacade'
+    'PDF' => Inline\LaravelPDF\PDFFacade::class,
 
 ### Step 4
 
