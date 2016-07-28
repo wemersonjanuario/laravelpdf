@@ -51,6 +51,14 @@ Configure your `wkhtmltopdf` executable path under `config/laravelpdf.php`
         return PDF::loadHTML('<strong>Hello World</strong>')->lowquality()->pageSize('A2')->download();
     });
 
+    Since 1.0.3 the library supports generating PDF from multiple Laravel views of HTML pieces. Each part begins from a new page. Examples of using this feature:
+
+    PDF::loadViews(['pdf.order', 'pdf.invoice', 'pdf.wiretransfer'])->download('payment-bundle.pdf');
+
+    $htmlPages[] = getMainReport();
+    $htmlPages[] = getAdditionalReport();
+    PDF::loadHTMLs($htmlPages)->download('consolidated-report.pdf');
+
 ## Saving the PDF
 
 laravelpdf uses [League\Flysystem](https://github.com/thephpleague/flysystem) to save the file to the local or remote filesystems.

@@ -5,8 +5,10 @@
 Method | Description
 ------ | -----------
 `loadView('view')` | PDF will be generated using the Laravel view
+`loadViews(['view1', 'view2', ...])` | PDF will be generated using the multiple Laravel views
 `loadUrl('http://www.laravel.com')` | PDF will be generated using the remote url
 `loadHTML('<strong>Hello World</strong>')` | PDF will be generated using the plain HTML String
+`loadHTMLs(['<strong>Hello World</strong>', 'page 2', 'page 3'])` | PDF will be generated using the plain HTML Strings
 `loadHTMLFile('path/to/html/file.html')` | PDF will be generated using an HTML file
 `grayscale()` | PDF will be generated in grayscale
 `orientation('Landscape')` | Set orientation to Landscape or Portrait (default Portrait)
