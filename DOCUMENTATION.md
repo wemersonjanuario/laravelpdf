@@ -5,8 +5,10 @@
 Method | Description
 ------ | -----------
 `loadView('view')` | PDF will be generated using the Laravel view
+`loadViews(['view1', 'view2', ...])` | PDF will be generated using the multiple Laravel views
 `loadUrl('http://www.laravel.com')` | PDF will be generated using the remote url
 `loadHTML('<strong>Hello World</strong>')` | PDF will be generated using the plain HTML String
+`loadHTMLs(['<strong>Hello World</strong>', 'page 2', 'page 3'])` | PDF will be generated using the plain HTML Strings
 `loadHTMLFile('path/to/html/file.html')` | PDF will be generated using an HTML file
 `grayscale()` | PDF will be generated in grayscale
 `orientation('Landscape')` | Set orientation to Landscape or Portrait (default Portrait)
@@ -47,6 +49,8 @@ Method | Description
 `headerSpacing('10mm')` | Spacing between header and content in mm (default 0)
 `printMediaType()` | Use print media-type instead of screen
 `zoom(0.5)` | Use the zoom factor (default 1)
+`javascript-delay(200)` | Set javascript delay (default 200ms)
+`no-stop-slow-scripts` | Do not stop slow running javascripts
 `download('filename')` | Serve the document as an attachment
 `stream('filename')` | Display the document in the browser window
 `save($fileName, League\Flysystem\AdapterInterface $adapter, $overwrite)` | Saves the PDF content to the specified location

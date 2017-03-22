@@ -21,13 +21,13 @@ Add this to your `composer.json`
 
 Add this line to `providers` array in your `config/app.php`
 
-    'Inline\LaravelPDF\PDFServiceProvider'
+    Inline\LaravelPDF\PDFServiceProvider::class
 
 ### Step 3
 
 Add this line to `aliases` array in your `config/app.php`
 
-    'PDF' => 'Inline\LaravelPDF\PDFFacade'
+    'PDF' => Inline\LaravelPDF\PDFFacade::class,
 
 ### Step 4
 
@@ -50,6 +50,14 @@ Configure your `wkhtmltopdf` executable path under `config/laravelpdf.php`
     Route::get('/', function() {
         return PDF::loadHTML('<strong>Hello World</strong>')->lowquality()->pageSize('A2')->download();
     });
+
+    Since 1.0.3 the library supports generating PDF from multiple Laravel views of HTML pieces. Each part begins from a new page. Examples of using this feature:
+
+    PDF::loadViews(['pdf.order', 'pdf.invoice', 'pdf.wiretransfer'])->download('payment-bundle.pdf');
+
+    $htmlPages[] = getMainReport();
+    $htmlPages[] = getAdditionalReport();
+    PDF::loadHTMLs($htmlPages)->download('consolidated-report.pdf');
 
 ## Saving the PDF
 

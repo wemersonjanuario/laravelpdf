@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\View;
 
 class PDF extends \Novanti\PDF\PDF
 {
+    /**
+     * @var array of \Inline\LaravelPDF\PDF for the case of output several pages
+     *   to a single PDF file.
+     */
+    protected $children = array();
 
     /**
      * Loads the Input Content from the view
@@ -20,6 +25,71 @@ class PDF extends \Novanti\PDF\PDF
         $this->htmlContent .= View::make($viewName, $data, $mergeData);
 
         return $this;
+    }
+
+    /**
+     * Mass version of the loadView function.
+     *
+     * @param array $viewNames
+     *   Array of Laravel view names to include in resulting page. Order matters.
+     * @param array $data
+     *   Data array is shared across all views.
+     * @param array $mergeData
+     *
+     * @return $this
+     *
+     * @see: loadView()
+     */
+    public function loadViews($viewNames = array(), $data = array(), $mergeData = array())
+    {
+        $this->children = array();
+        foreach ($viewNames as $key => $viewName) {
+            $className = get_class();
+            $item = new $className($this->cmd, $this->folder);
+            $item->loadView($viewName, $data, $mergeData);
+            $this->children[] = $item;
+        }
+
+        return $this;
+    }
+
+    /**
+     * Mass loads HTML Content.
+     *
+     * @param array string $htmls
+     *
+     * @return $this
+     */
+    public function loadHTMLs($htmls)
+    {
+        $this->children = array();
+        foreach ($htmls as $key => $html) {
+            $className = get_class();
+            $item = new $className($this->cmd, $this->folder);
+            /* @var \Inline\LaravelPDF\PDF $item */
+            $item->loadHTML($html);
+            $this->children[] = $item;
+        }
+        return $this;
+    }
+
+    /**
+     * Updated version which can handle multiple source files.
+     *
+     * @return string
+     */
+    protected function getInputSource()
+    {
+        if (empty($this->children)) {
+            return parent::getInputSource();
+        }
+
+        $childPaths = [];
+        foreach ($this->children as $child) {
+          $childPaths[] = $child->getInputSource();
+        }
+
+        return implode(" ", $childPaths);
     }
 
     /**
