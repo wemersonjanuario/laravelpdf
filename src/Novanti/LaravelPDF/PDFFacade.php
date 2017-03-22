@@ -1,4 +1,4 @@
-<?php namespace Inline\LaravelPDF;
+<?php namespace Novanti\LaravelPDF;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,9 +1,9 @@
-<?php namespace Inline\LaravelPDF;
+<?php namespace Novanti\LaravelPDF;
 
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 
-class PDF extends \Inline\PDF\PDF
+class PDF extends \Novanti\PDF\PDF
 {
 
     /**
