@@ -13,7 +13,7 @@ Add this to your `composer.json`
     
     {
         "require": {            
-            "wemersonjanuario/laravelpdf": "1.0.*"
+            "wemersonjanuario/laravelpdf": "1.1.*"
         }
     }
 
@@ -21,13 +21,13 @@ Add this to your `composer.json`
 
 Add this line to `providers` array in your `config/app.php`
 
-    Inline\LaravelPDF\PDFServiceProvider::class
+    Novanti\LaravelPDF\PDFServiceProvider::class
 
 ### Step 3
 
 Add this line to `aliases` array in your `config/app.php`
 
-    'PDF' => Inline\LaravelPDF\PDFFacade::class,
+    'PDF' => Novanti\LaravelPDF\PDFFacade::class,
 
 ### Step 4
 
